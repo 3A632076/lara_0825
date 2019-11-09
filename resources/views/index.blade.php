@@ -55,7 +55,7 @@
                 </div>
                 <hr>
                 <div class="post-preview">
-                    <a href="post.html">
+                    <a href="{{route('posts.show')}}">
                         <h2 class="post-title">
                             Failure is not an option
                         </h2>
