@@ -36,9 +36,10 @@ Route::get('/', function () {
     //$post->title='savedtitle';
     //$post->content='savedcontent';
     //$post->save();
-    $post=\App\Post::find(1);
-    $post->delete();
-
+    //$post=\App\Post::find(1);
+    //$post->delete();
+    \App\Post::destroy(2);
+    
     return view('welcome');
 });
 Route::get('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index']);
