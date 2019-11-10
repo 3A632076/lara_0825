@@ -32,11 +32,12 @@ Route::get('/', function () {
     //    'title'=>'updatedtitle',
     //    'content'=>'updatedcontent',
     //]);
+    //$post=\App\Post::find(1);
+    //$post->title='savedtitle';
+    //$post->content='savedcontent';
+    //$post->save();
     $post=\App\Post::find(1);
-    $post->title='savedtitle';
-    $post->content='savedcontent';
-    $post->save();
-
+    $post->delete();
 
     return view('welcome');
 });
