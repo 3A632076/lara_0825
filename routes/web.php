@@ -17,11 +17,12 @@ Route::get('/', function () {
     //  'title'=>'test title',
     //    'content'=>'test content',
     //]);
-    $post = new\App\Post();
-    $post->title ='testtitle';
-    $post->content ='testcontent';
-    $post->save();
-
+    //$post = new\App\Post();
+    //$post->title ='testtitle';
+    //$post->content ='testcontent';
+    //$post->save();
+    $posts = \App\Post::all();
+    dd($posts);
 
     return view('welcome');
 });
