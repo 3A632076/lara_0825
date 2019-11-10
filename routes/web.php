@@ -27,11 +27,16 @@ Route::get('/', function () {
     //dd($post);
     //$posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
     //dd($posts);
+    //$post=\App\Post::find(1);
+    //$post->update([
+    //    'title'=>'updatedtitle',
+    //    'content'=>'updatedcontent',
+    //]);
     $post=\App\Post::find(1);
-    $post->update([
-        'title'=>'updatedtitle',
-        'content'=>'updatedcontent',
-    ]);
+    $post->title='savedtitle';
+    $post->content='savedcontent';
+    $post->save();
+
 
     return view('welcome');
 });
