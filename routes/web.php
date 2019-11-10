@@ -25,8 +25,13 @@ Route::get('/', function () {
     //dd($posts);
     //$post = \App\Post::find(1);
     //dd($post);
-    $posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
-    dd($posts);
+    //$posts=\App\Post::where('id','<',10)->orderBy('id','DESC')->get();
+    //dd($posts);
+    $post=\App\Post::find(1);
+    $post->update([
+        'title'=>'updatedtitle',
+        'content'=>'updatedcontent',
+    ]);
 
     return view('welcome');
 });
